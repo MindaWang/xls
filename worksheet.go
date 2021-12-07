@@ -26,7 +26,10 @@ type WorkSheet struct {
 }
 
 func (w *WorkSheet) Row(i int) *Row {
-	row := w.rows[uint16(i)]
+	row, ok := w.rows[uint16(i)]
+	if !ok {
+		return nil
+	}
 	row.wb = w.wb
 	return row
 }
