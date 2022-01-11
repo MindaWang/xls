@@ -1,4 +1,4 @@
-module github.com/hlficc/xls
+module github.com/MindaWang/xls
 
 go 1.17
 
